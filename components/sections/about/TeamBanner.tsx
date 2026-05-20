@@ -8,10 +8,11 @@ export default function TeamBanner() {
         src="/images/about/team-banner.jpg"
         alt="Pacesetter cleaning team at work"
         fill
+        priority
         className="object-cover transition-transform duration-[2s] hover:scale-105"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/70 to-navy/80" />
+      <div className="absolute inset-0 bg-linear-to-r from-navy/80 via-navy/70 to-navy/80" />
       <div className="relative z-10 text-center text-white max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <AnimatedSection animation="fade-in-up">
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight">

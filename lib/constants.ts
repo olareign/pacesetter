@@ -21,6 +21,15 @@ export const SOCIAL_LINKS = [
 ];
 
 export const CONTACT = {
-  phone: "+44 0000 000 000",
+  phone: "+447894239785",
   email: "info@pacesettercleaning.co.uk",
+  phoneAlt: "+447884310461",
 };
+// export const CONTACT_1 = {
+//   phone: "+447894239785",
+//   email: "info@pacesettercleaning.co.uk",
+// };
+// export const CONTACT_2 = {
+//   phone: "+447884310461",
+//   email: "info@pacesettercleaning.co.uk",
+// };

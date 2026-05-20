@@ -9,7 +9,7 @@ export default function OurStory() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <AnimatedSection animation="fade-in-left">
             <div>
-              <p className="text-lime font-display text-sm font-semibold uppercase tracking-[0.2em] mb-2">
+              <p className="text-lime font-display text-sm font-semibold uppercase tracking-widest mb-2">
                 Our Story
               </p>
               <Divider />
@@ -19,7 +19,7 @@ export default function OurStory() {
               <div className="font-body text-text-dark/65 leading-relaxed space-y-4">
                 <p>
                   At Pace Setter Cleaning Services LTD, we are committed to
-                  delivering reliable, professional, and high-quality cleaning
+                  delivering reliable, professional, and high quality cleaning
                   solutions tailored to homes, offices, and commercial spaces.
                   With a focus on excellence, attention to detail, and customer
                   satisfaction, we take pride in creating clean, safe, and
@@ -28,7 +28,7 @@ export default function OurStory() {
                 <p>
                   Our dedicated team combines efficiency with professionalism to
                   provide services you can trust every time. We believe that a
-                  truly clean space does more than look good — it creates an
+                  truly clean space does more than look good. It creates an
                   environment where people feel comfortable, focused, and at ease.
                   That belief drives everything we do.
                 </p>
@@ -44,6 +44,8 @@ export default function OurStory() {
                   alt="Pacesetter professional cleaning team"
                   width={600}
                   height={450}
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>

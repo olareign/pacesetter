@@ -27,7 +27,7 @@ export default function USPStrip() {
           {usps.map((usp, i) => (
             <AnimatedSection key={usp.title} animation="fade-in-up" delay={i * 100}>
               <div className="group text-center p-6 lg:p-8">
-                <div className="bg-lime/10 group-hover:bg-lime/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1">
+                <div className="bg-lime/10 group-hover:bg-lime/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-[transform,background-color] duration-300 group-hover:scale-110 group-hover:-translate-y-1">
                   <usp.icon className="text-lime" size={28} />
                 </div>
                 <h3 className="font-display font-bold text-xl text-navy mb-3">

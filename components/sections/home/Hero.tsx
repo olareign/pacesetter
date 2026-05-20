@@ -4,10 +4,10 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-navy overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#1B2F5E,_#0D1F45)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,#1B2F5E,#0D1F45)]" />
 
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-lime/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-white/[0.03] rounded-full blur-[100px]" />
+      <div className="absolute top-20 right-0 w-125 h-125 bg-lime/5 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-1/4 w-100 h-100 bg-white/3 rounded-full blur-[100px]" />
 
       <div className="absolute top-1/4 left-[10%] w-3 h-3 bg-lime/30 rounded-full animate-float" style={{ animationDelay: "0s" }} />
       <div className="absolute top-1/3 right-[15%] w-2 h-2 bg-white/20 rounded-full animate-float" style={{ animationDelay: "1s" }} />
@@ -25,7 +25,7 @@ export default function Hero() {
             <AnimatedSection animation="fade-in-up" delay={100}>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
                 Setting the Standard{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime to-lime-light">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-lime to-lime-light">
                   in Cleaning
                 </span>
               </h1>
@@ -42,7 +42,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg px-8 py-4 font-display font-semibold uppercase tracking-wider text-sm bg-gradient-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110 transition-all duration-300 active:scale-[0.97]"
+                  className="inline-flex items-center justify-center rounded-lg px-8 py-4 font-display font-semibold uppercase tracking-wider text-sm bg-linear-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110 transition-all duration-300 active:scale-[0.97]"
                 >
                   Get a Free Quote
                 </Link>

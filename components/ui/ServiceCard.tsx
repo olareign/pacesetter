@@ -18,7 +18,7 @@ export default function ServiceCard({
   const IconComponent = (Icons as unknown as Record<string, ElementType>)[icon];
 
   return (
-    <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1.5 border-t-[3px] border-lime/80 p-7 flex flex-col relative overflow-hidden">
+    <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-500 hover:-translate-y-1.5 border-t-[3px] border-lime/80 p-7 flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-lime/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="relative">
         {IconComponent && (

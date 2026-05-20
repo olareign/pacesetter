@@ -9,6 +9,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("");
+  const [otherService, setOtherService] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -103,6 +104,16 @@ export default function ContactForm() {
             ))}
             <option value="other">Other</option>
           </select>
+          {service === "other" && (
+            <input
+              id="other-service"
+              type="text"
+              placeholder="Please specify your service requirement"
+              value={otherService}
+              onChange={(e) => setOtherService(e.target.value)}
+              className="mt-3 w-full rounded-xl border border-surface bg-white px-4 py-3.5 font-body text-sm text-text-dark placeholder:text-text-dark/30 focus:outline-none focus:ring-2 focus:ring-lime/50 focus:border-lime/50 transition-[border-color,box-shadow] duration-200"
+            />
+          )}
         </div>
         <div>
           <label htmlFor="message" className="sr-only">
@@ -120,7 +131,7 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-          className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-7 py-4 font-display font-semibold uppercase tracking-wider text-sm bg-gradient-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110 transition-all duration-300 active:scale-[0.97]"
+          className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-7 py-4 font-display font-semibold uppercase tracking-wider text-sm bg-linear-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110 transition-all duration-300 active:scale-[0.97]"
         >
           <Send size={16} />
           Get a Free Quote

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MessageSquare, Camera, Music2, MessageCircle } from "lucide-react";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
 import Divider from "@/components/ui/Divider";
+import Logo from "@/components/ui/Logo";
 
 const iconMap: Record<string, React.ElementType> = {
   MessageSquare,
@@ -17,12 +18,10 @@ export default function Footer() {
         <div className="py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
             <div className="md:col-span-1">
-              <Link href="/" className="font-display text-2xl font-bold tracking-tight">
-                <span className="text-white">PACE</span>
-                <span className="text-lime">SETTER</span>
-              </Link>
+              <Logo variant="light" className="h-10 w-auto" />
               <p className="font-body text-white/50 text-sm mt-4 leading-relaxed max-w-xs">
-                Setting the standard in cleaning &mdash; professional, reliable cleaning
+                <span className="font-bold text-lg text-white">Setting the standard<span className="text-lime"> in cleaning.</span></span>
+                <br/>Professional, reliable cleaning
                 services for homes, offices, and commercial spaces across the UK.
               </p>
             </div>

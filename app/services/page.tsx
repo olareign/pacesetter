@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import PageHero from "@/components/ui/PageHero";
 import ServicesIntro from "@/components/sections/services/ServicesIntro";
-import ServicesGrid from "@/components/sections/services/ServicesGrid";
-import ServiceDetails from "@/components/sections/services/ServiceDetails";
-import CTABanner from "@/components/sections/home/CTABanner";
+
+const ServicesGrid = dynamic(() => import("@/components/sections/services/ServicesGrid"), { ssr: true });
+const ServiceDetails = dynamic(() => import("@/components/sections/services/ServiceDetails"), { ssr: true });
+const CTABanner = dynamic(() => import("@/components/sections/home/CTABanner"), { ssr: true });
 
 export const metadata: Metadata = {
   title: "Our Services | Pacesetter Cleaning Services Ltd",

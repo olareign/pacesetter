@@ -1,14 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
+import { Menu } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
+
+const MobileMenu = dynamic(() => import("@/components/layout/MobileMenu"), {
+  ssr: false,
+});
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -16,9 +24,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const close = useCallback(() => setIsOpen(false), []);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
         scrolled
           ? "bg-white/80 backdrop-blur-lg shadow-sm border-b border-surface/80"
           : "bg-white border-b border-transparent"
@@ -26,17 +36,18 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
-          <Link href="/" className="font-display text-xl font-bold tracking-tight">
-            <span className="text-navy">PACE</span>
-            <span className="text-lime">SETTER</span>
-          </Link>
+          <Logo className="h-8 w-auto" />
 
           <nav className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative font-body text-sm font-medium text-navy/70 hover:text-navy px-4 py-2 rounded-lg hover:bg-navy/5 transition-all duration-200"
+                className={`relative font-body text-sm font-medium px-4 py-2 rounded-lg transition-[color,background-color] duration-200 ${
+                  pathname === link.href
+                    ? "text-lime bg-lime/5"
+                    : "text-navy/70 hover:text-navy hover:bg-navy/5"
+                }`}
               >
                 {link.label}
               </Link>
@@ -51,43 +62,17 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="md:hidden relative z-50 text-navy p-2 hover:bg-navy/5 rounded-lg transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            className="md:hidden relative z-50 flex items-center justify-center h-11 w-11 rounded-lg text-navy/70 hover:text-navy hover:bg-navy/5 transition-colors duration-200"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
+            <Menu size={20} />
           </button>
         </div>
       </div>
 
-      <div
-        className={`md:hidden fixed inset-0 bg-white/95 backdrop-blur-lg transition-all duration-300 ${
-          isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <nav className="flex flex-col items-center justify-center h-full gap-6 px-4">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-display text-2xl text-navy hover:text-lime transition-colors duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Button
-            href="/contact"
-            variant="primary-gradient"
-            className="mt-4 w-full max-w-xs text-center"
-            onClick={() => setIsOpen(false)}
-          >
-            Get a Free Quote
-          </Button>
-        </nav>
-      </div>
+      {isOpen && <MobileMenu isOpen={isOpen} onClose={close} />}
     </header>
   );
 }

@@ -32,9 +32,7 @@ export default function StatsStrip() {
             </AnimatedSection>
           ))}
         </div>
-        <p className="text-center font-body text-white/20 text-xs mt-8">
-          {/* TODO: update with real figures */}
-        </p>
+
       </div>
     </section>
   );

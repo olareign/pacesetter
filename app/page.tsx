@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/sections/home/Hero";
 import USPStrip from "@/components/sections/home/USPStrip";
 import ServicesOverview from "@/components/sections/home/ServicesOverview";
-import WhyChooseUs from "@/components/sections/home/WhyChooseUs";
-import TestimonialsTeaser from "@/components/sections/home/TestimonialsTeaser";
-import CTABanner from "@/components/sections/home/CTABanner";
+
+const WhyChooseUs = dynamic(() => import("@/components/sections/home/WhyChooseUs"), { ssr: true });
+const TestimonialsTeaser = dynamic(() => import("@/components/sections/home/TestimonialsTeaser"), { ssr: true });
+const CTABanner = dynamic(() => import("@/components/sections/home/CTABanner"), { ssr: true });
 
 export default function Home() {
   return (

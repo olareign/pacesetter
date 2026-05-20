@@ -26,7 +26,7 @@ export default function TestimonialsTeaser() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fade-in-up">
           <div className="text-center mb-14">
-            <p className="text-lime font-display text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-lime font-display text-sm font-semibold uppercase tracking-widest mb-3">
               Testimonials
             </p>
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-navy">
@@ -38,7 +38,7 @@ export default function TestimonialsTeaser() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((t, i) => (
             <AnimatedSection key={t.name} animation="fade-in-up" delay={i * 100}>
-              <div className="group bg-surface rounded-xl p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div className="group bg-surface rounded-xl p-7 hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-300">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="text-lime" size={15} fill="currentColor" />
@@ -58,8 +58,8 @@ export default function TestimonialsTeaser() {
 
         <AnimatedSection animation="fade-in-up" delay={300}>
           <div className="text-center mt-12">
-            <Button href="/testimonials" variant="secondary">
-              Read More Reviews
+            <Button href="/about" variant="secondary">
+              Learn More About Us
             </Button>
           </div>
         </AnimatedSection>

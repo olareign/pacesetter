@@ -37,8 +37,8 @@ export default function Values() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {values.map((value, i) => (
             <AnimatedSection key={value.title} animation="fade-in-up" delay={i * 100}>
-              <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 p-8 lg:p-10 border-t-[3px] border-lime/80 hover:-translate-y-1">
-                <div className="bg-lime/10 group-hover:bg-lime/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1">
+              <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-500 p-8 lg:p-10 border-t-[3px] border-lime/80 hover:-translate-y-1">
+                <div className="bg-lime/10 group-hover:bg-lime/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-[transform,background-color] duration-300 group-hover:scale-110 group-hover:-translate-y-1">
                   <value.icon className="text-lime" size={30} />
                 </div>
                 <h3 className="font-display font-bold text-xl text-navy mb-3">

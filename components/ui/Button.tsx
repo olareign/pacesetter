@@ -11,11 +11,11 @@ interface ButtonProps {
 }
 
 const baseStyles =
-  "inline-flex items-center justify-center rounded-lg px-7 py-3.5 font-display font-semibold uppercase tracking-wider text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime focus:ring-offset-2 active:scale-[0.97]";
+  "inline-flex items-center justify-center rounded-lg px-7 py-3.5 font-display font-semibold uppercase tracking-wider text-sm transition-[transform,box-shadow,background-color,color,border-color] duration-300 focus:outline-none focus:ring-2 focus:ring-lime focus:ring-offset-2 active:scale-[0.97]";
 
 const variants: Record<ButtonVariant, string> = {
   "primary-gradient":
-    "bg-gradient-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110",
+    "bg-linear-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110",
   primary:
     "bg-lime text-white hover:bg-lime-dark shadow-md shadow-lime/20 hover:shadow-lg hover:shadow-lime/25",
   secondary:

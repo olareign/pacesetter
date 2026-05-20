@@ -9,7 +9,7 @@ const servicesDetail = [
     title: "Residential Cleaning",
     image: "/images/services/residential.jpg",
     description:
-      "Your home deserves the best care. Our residential cleaning service covers every room, every surface, and every corner — leaving your home fresh, hygienic, and welcoming. Whether you need a regular weekly clean or a one-off session before guests arrive, our team delivers consistently exceptional results.",
+      "Your home deserves the best care. Our residential cleaning service covers every room, every surface, and every corner, leaving your home fresh, hygienic, and welcoming. Whether you need a regular weekly clean or a one-off session before guests arrive, our team delivers consistently exceptional results.",
     bullets: [
       "Regular and one-off cleaning available",
       "Eco-friendly products on request",
@@ -21,7 +21,7 @@ const servicesDetail = [
     title: "Office Cleaning",
     image: "/images/services/office.jpg",
     description:
-      "A clean office is a productive office. We provide flexible, scheduled cleaning contracts for businesses of all sizes — from small studios to multi-floor offices. Our team works around your hours, ensuring minimal disruption to your operations while maintaining a spotless, professional environment.",
+      "A clean office is a productive office. We provide flexible, scheduled cleaning contracts for businesses of all sizes, from small studios to multi-floor offices. Our team works around your hours, ensuring minimal disruption to your operations while maintaining a spotless, professional environment.",
     bullets: [
       "Before/after-hours scheduling available",
       "Tailored cleaning plans",
@@ -82,7 +82,7 @@ export default function ServiceDetails() {
                 className={index % 2 === 1 ? "lg:order-2" : ""}
               >
                 <div>
-                  <p className="text-lime font-display text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                  <p className="text-lime font-display text-sm font-semibold uppercase tracking-widest mb-3">
                     Our Services
                   </p>
                   <h3 className="font-display font-bold text-2xl lg:text-3xl text-navy mb-5 leading-tight">
@@ -105,7 +105,7 @@ export default function ServiceDetails() {
                   </ul>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center rounded-lg px-7 py-3.5 font-display font-semibold uppercase tracking-wider text-sm bg-gradient-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110 transition-all duration-300 active:scale-[0.97]"
+                    className="inline-flex items-center justify-center rounded-lg px-7 py-3.5 font-display font-semibold uppercase tracking-wider text-sm bg-linear-to-r from-lime to-lime-dark text-white shadow-lg shadow-lime/25 hover:shadow-xl hover:shadow-lime/30 hover:brightness-110 transition-all duration-300 active:scale-[0.97]"
                   >
                     Get a Free Quote
                   </Link>
@@ -124,6 +124,8 @@ export default function ServiceDetails() {
                       alt={`${service.title} - Pacesetter Cleaning Services`}
                       width={600}
                       height={450}
+                      loading="lazy"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
