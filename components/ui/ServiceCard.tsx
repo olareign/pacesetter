@@ -1,6 +1,14 @@
 import Link from "next/link";
-import * as Icons from "lucide-react";
+import { Home, Building2, Store, KeyRound, Sparkles } from "lucide-react";
 import type { ElementType } from "react";
+
+const iconMap: Record<string, ElementType> = {
+  Home,
+  Building2,
+  Store,
+  KeyRound,
+  Sparkles,
+};
 
 interface ServiceCardProps {
   title: string;
@@ -15,7 +23,7 @@ export default function ServiceCard({
   icon,
   href,
 }: ServiceCardProps) {
-  const IconComponent = (Icons as unknown as Record<string, ElementType>)[icon];
+  const IconComponent = iconMap[icon];
 
   return (
     <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-500 hover:-translate-y-1.5 border-t-[3px] border-lime/80 p-7 flex flex-col relative overflow-hidden">

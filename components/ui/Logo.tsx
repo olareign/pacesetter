@@ -23,8 +23,8 @@ export default function Logo({
         style={{
           filter: variant === "light" ? "brightness(0) invert(1)" : undefined,
         }}
-        unoptimized
         priority
+        sizes="100px"
       />
     </div>
   );

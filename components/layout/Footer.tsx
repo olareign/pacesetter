@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { MessageSquare, Camera, Music2, MessageCircle } from "lucide-react";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
+import { FaFacebookF, FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import Divider from "@/components/ui/Divider";
 import Logo from "@/components/ui/Logo";
 
 const iconMap: Record<string, React.ElementType> = {
-  MessageSquare,
-  Camera,
-  Music2,
-  MessageCircle,
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+  FaXTwitter,
 };
 
 export default function Footer() {

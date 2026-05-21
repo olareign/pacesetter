@@ -25,11 +25,3 @@ export const CONTACT = {
   email: "info@pacesettercleaning.co.uk",
   phoneAlt: "+447884310461",
 };
-// export const CONTACT_1 = {
-//   phone: "+447894239785",
-//   email: "info@pacesettercleaning.co.uk",
-// };
-// export const CONTACT_2 = {
-//   phone: "+447884310461",
-//   email: "info@pacesettercleaning.co.uk",
-// };
