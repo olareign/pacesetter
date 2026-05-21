@@ -15,10 +15,10 @@ export default function Logo({
   const logo = (
     <div className={`relative shrink-0 ${className}`}>
       <Image
-        src="/logo.svg"
+        src="/images/logo.png"
         alt="Pacesetter Cleaning Services Ltd"
-        width={250}
-        height={48}
+        width={100}
+        height={100}
         className="object-contain w-full h-full"
         style={{
           filter: variant === "light" ? "brightness(0) invert(1)" : undefined,

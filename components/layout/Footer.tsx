@@ -18,7 +18,9 @@ export default function Footer() {
         <div className="py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
             <div className="md:col-span-1">
-              <Logo variant="light" className="h-10 w-auto" />
+              <div className="w-full bg-white">
+                <Logo className="h-15 w-auto" />
+              </div>
               <p className="font-body text-white/50 text-sm mt-4 leading-relaxed max-w-xs">
                 <span className="font-bold text-lg text-white">Setting the standard<span className="text-lime"> in cleaning.</span></span>
                 <br/>Professional, reliable cleaning

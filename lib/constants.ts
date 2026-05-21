@@ -14,11 +14,11 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIAL_LINKS = [
-  { platform: "Facebook", href: "#", icon: "MessageSquare" },
-  { platform: "Instagram", href: "#", icon: "Camera" },
-  { platform: "TikTok", href: "#", icon: "Music2" },
-  { platform: "X", href: "#", icon: "MessageCircle" },
-];
+  { platform: "Facebook", href: "#", icon: "FaFacebookF" },   
+  { platform: "Instagram", href: "#", icon: "FaInstagram" },  
+  { platform: "TikTok", href: "#", icon: "FaTiktok" },        
+  { platform: "X", href: "#", icon: "FaXTwitter" },           
+]
 
 export const CONTACT = {
   phone: "+447894239785",

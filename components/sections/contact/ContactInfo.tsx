@@ -1,13 +1,14 @@
-import { Phone, MessageCircle, Mail, MessageSquare, Camera, Music2 } from "lucide-react";
+import { FaPhone, FaEnvelope, FaWhatsapp  } from "react-icons/fa6";
 import { CONTACT, SOCIAL_LINKS } from "@/lib/constants";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { FaFacebookF, FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6"
 
 const socialIconMap: Record<string, React.ElementType> = {
-  MessageSquare,
-  Camera,
-  Music2,
-  MessageCircle,
-};
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+  FaXTwitter,
+}
 
 export default function ContactInfo() {
   return (
@@ -24,7 +25,7 @@ export default function ContactInfo() {
           <div className="group p-5 -mx-4 rounded-xl hover:bg-surface/50 transition-colors duration-200">
             <div className="flex items-start gap-4">
               <div className="bg-lime/10 group-hover:bg-lime/20 rounded-xl w-14 h-14 flex items-center justify-center shrink-0 transition-[transform,background-color] duration-300 group-hover:scale-110">
-                <Phone className="text-lime" size="22" />
+                <FaPhone className="text-lime" size="22" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-display font-semibold text-navy text-sm mb-3">
@@ -42,7 +43,7 @@ export default function ContactInfo() {
                           className="p-1.5 rounded-md text-text-dark/40 hover:text-lime hover:bg-lime/5 transition-colors duration-200"
                           aria-label={`Call ${number}`}
                         >
-                          <Phone size={14} />
+                          <FaPhone size={14} />
                         </a>
                         <a
                           href={`https://wa.me/${number.replace(/[^0-9]/g, "")}`}
@@ -51,7 +52,7 @@ export default function ContactInfo() {
                           className="p-1.5 rounded-md text-text-dark/40 hover:text-lime hover:bg-lime/5 transition-colors duration-200"
                           aria-label={`WhatsApp ${number}`}
                         >
-                          <MessageCircle size={14} />
+                          <FaWhatsapp size={14} />
                         </a>
                       </div>
                     </div>
@@ -65,7 +66,7 @@ export default function ContactInfo() {
         <AnimatedSection animation="fade-in-left" delay={100}>
           <div className="group flex items-start gap-4 p-4 -mx-4 rounded-xl hover:bg-surface/50 transition-colors duration-200">
             <div className="bg-lime/10 group-hover:bg-lime/20 rounded-xl w-14 h-14 flex items-center justify-center shrink-0 transition-[transform,background-color] duration-300 group-hover:scale-110">
-              <Mail className="text-lime" size="22" />
+              <FaEnvelope className="text-lime" size="22" />
             </div>
             <div>
               <p className="font-display font-semibold text-navy text-sm mb-1">
